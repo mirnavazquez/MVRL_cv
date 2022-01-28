@@ -1,0 +1,240 @@
+---
+title: "Mirna Vazquez Rosas Landa's CV"
+author: Mirna Vazquez Rosas Landa
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(magrittr) # For the pipe
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "CV/data/",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+![avatar](/Users/kiley/Documents/MVRL_cv/img/Foto-MVRL.png){width=100%}
+
+```{r}
+if(params$pdf_mode){
+  cat("View this CV online with links at _https://github.com/mirnavazquez/MVRL_cv/CV/_")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mirnavazquez/MVRL_cv/CV/MVRL_cv.pdf)")
+}
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_contact_info()
+```
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %>% print_skill_bars()
+```
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+The source code is available [on github.com/nstrayer/cv](https://github.com/mirnavazquez/MVRL_cv/R/).
+
+Last updated on `r Sys.Date()`.
+
+
+
+Main
+================================================================================
+
+Mirna Vazquez Rosas Landa {#title}
+--------------------------------------------------------------------------------
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+
+```{r}
+# Note the special double pipe so we modify the CV object in place
+CV %<>% print_text_block("intro") 
+```
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('research_positions')
+```
+
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Funded proposals {#grants data-icon=money-bill-wave}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('grants')
+```
+
+
+Grants applied {#grants_applied data-icon=money-bill-wave}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('grants_applied')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Honors and Awards {#honors data-icon=medal}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('honors')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Publications {#publications data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('publication')
+```
+
+Software {#software data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('software')
+```
+
+Leadership and Service {#leadership data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('service')
+```
+
+:::aside
+```{r}
+CV %<>% print_text_block('service_aside')
+```
+:::
+
+Mentoring Experience {#mentoring data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('mentoring')
+```
+
+
+Teaching Experience - Instructor{data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_instructor')
+```
+
+Teaching Experience - Assistant {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_assistant')
+```
+
+Workshops {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('conf_attendi')
+```
+
+:::aside
+```{r}
+CV %<>% print_text_block('conf_attendi_aside')
+```
+:::
+
+
+Conferences, Talks, Posters and Scientific outreach {#courses data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('conf')
+```
+
+Languages {#languages data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+* Native: Spanish (Mexico)
+* Bilingual: English
+
+
+```{r}
+CV %<>% print_links()
+```
+
+
+

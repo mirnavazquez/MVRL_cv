@@ -45,12 +45,7 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-```{r}
-# Build interactive network of positions colored by section
-# and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
-```
-
+![avatar](/Users/kiley/Documents/MVRL_cv/img/Foto-MVRL.png){width=100%}
 
 ```{r}
 if(params$pdf_mode){
@@ -95,12 +90,13 @@ Main
 Mirna Vazquez Rosas Landa {#title}
 --------------------------------------------------------------------------------
 
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+
 ```{r}
 # Note the special double pipe so we modify the CV object in place
 CV %<>% print_text_block("intro") 
 ```
-
-
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -109,7 +105,10 @@ Education {data-icon=graduation-cap data-concise=true}
 CV %<>% print_section('education')
 ```
 
-
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
 
 Research Experience {data-icon=laptop}
 --------------------------------------------------------------------------------
@@ -119,18 +118,24 @@ CV %<>% print_section('research_positions')
 ```
 
 
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
 
-Industry Experience {data-icon=suitcase}
+Funded proposals {#grants data-icon=money-bill-wave}
 --------------------------------------------------------------------------------
 
-::: aside
 ```{r}
-CV %<>% print_text_block('industy_experience_aside')
+CV %<>% print_section('grants')
 ```
-:::
+
+
+Grants applied {#grants_applied data-icon=money-bill-wave}
+--------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('industry_positions')
+CV %<>% print_section('grants_applied')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
@@ -138,67 +143,98 @@ CV %<>% print_section('industry_positions')
 <br>
 <br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('teaching_experience_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('teaching_positions')
-```
-
-
-
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('data_science_writing_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('data_science_writings')
-```
-
-
-
-Selected Press (About)  {data-icon=newspaper}
+Honors and Awards {#honors data-icon=medal}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('about_me_press')
+CV %<>% print_section('honors')
 ```
 
-
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
 <br>
 <br>
 
-
-Selected Press (By)  {data-icon=newspaper}
+Publications {#publications data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('by_me_press')
+CV %<>% print_section('publication')
 ```
 
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
+Software {#software data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('academic_articles')
+CV %<>% print_section('software')
 ```
 
+Leadership and Service {#leadership data-icon=book}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('service')
+```
+
+:::aside
+```{r}
+CV %<>% print_text_block('service_aside')
+```
+:::
+
+Mentoring Experience {#mentoring data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('mentoring')
+```
+
+
+Teaching Experience - Instructor{data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_instructor')
+```
+
+Teaching Experience - Assistant {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('teaching_assistant')
+```
+
+Workshops {data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('conf_attendi')
+```
+
+:::aside
+```{r}
+CV %<>% print_text_block('conf_attendi_aside')
+```
+:::
+
+
+Conferences, Talks, Posters and Scientific outreach {#courses data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('conf')
+```
+
+Languages {#languages data-icon=chalkboard-teacher}
+--------------------------------------------------------------------------------
+
+* Native: Spanish (Mexico)
+* Bilingual: English
 
 
 ```{r}
 CV %<>% print_links()
 ```
+
+
 

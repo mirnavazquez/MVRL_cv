@@ -1,7 +1,11 @@
 Id used for finding text block,Contents of text block. Supports markdown formatting.
 loc,text
-intro,"I have made [visualizations viewed by hundreds of thousands of people](https://www.nytimes.com/interactive/2016/08/26/us/college-student-migration.html), [sped up query times for 25 terabytes of data by an average of 4,800 times](https://livefreeordichotomize.com/2019/06/04/using_awk_and_r_to_parse_25tb/), and built [packages for R](https://github.com/nstrayer/shinysense) that let you [do magic](http://nickstrayer.me/dataDayTexas/).
-"
-industy_experience_aside,I have worked in a variety of roles ranging from journalist to software engineer to data scientist. I like collaborative environments where I can learn from my peers. 
-teaching_experience_aside,I am passionate about education. I believe that no topic is too complex if the teacher is empathetic and willing to think about new methods of approaching task. 
-data_science_writing_aside,I regularly blog about data science and visualization on my blog [LiveFreeOrDichotomize.](https://livefreeordichotomize.com/)
+intro,"As a postdoctoral fellow at the [Baker Lab](https://sites.utexas.edu/baker-lab/),   I am studying the ocean's microbial communities, interested mainly in their metabolisms and phylogenetic diversity. 
+
+My interest in bioinformatics and genomics took me to my first postdoc at the [Genomics and transcriptomics lab at the INECOL](https://www.inecol.mx/personal/index.php/moleculares/139-enrique-ibarra-laclette).  Where I used the pan-genome paradigm to design a method to identify a phytopathogenic fungus that was killing trees at the Mexican-US border.
+
+I did my Ph.D. at the [Ecology Institute at the UNAM](http://www.ecologia.unam.mx/web/) in Mexico City. During this time, I studied the landscape genomics of a rare lineage of Vibrionaceae isolated from [Cuatro Cienegas](https://www.sciencemag.org/news/2020/07/watch-threatened-pools-mexican-desert-hold-clues-early-life), looking for the genes that could explain the adaptation to this ultra-oligotrophic environment.
+
+I enjoy teaching and sharing knowledge, and I love the R community. I start using R when I became part of the [CDSB](https://comunidadbioinfo.github.io) and [Rladies community](https://rladies.org) and then a co-organizer of [RLadies Xalapa](https://www.meetup.com/rladies-xalapa/), a safe place for minorities to learn how to code.      "
+service_aside,I enjoy sharing my knowledge and helping people to grow
+conf_attendi_aside,I am constantly learning
