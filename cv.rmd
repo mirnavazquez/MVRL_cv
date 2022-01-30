@@ -51,7 +51,7 @@ Aside
 if(params$pdf_mode){
   cat("View this CV online at: https://mirnavazquez.netlify.app/media/resume.html")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mirnavazquez/MVRL_cv/blob/d92a42a01b6d684dee944017fc644d4a289f29c1/cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mirnavazquez/MVRL_cv/raw/d92a42a01b6d684dee944017fc644d4a289f29c1/cv.pdf)")
 }
 ```
 
