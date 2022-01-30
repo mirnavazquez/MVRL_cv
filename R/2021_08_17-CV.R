@@ -4,9 +4,9 @@
 datadrivencv::use_datadriven_cv(
   full_name = "Mirna Vazquez Rosas Landa",
   data_location = "CV/data/",
-  pdf_location = "https://github.com/mirnavazquez/MVRL_cv/CV/MVRL_cv.pdf",
-  html_location = "https://github.com/mirnavazquez/MVRL_cv/CV/",
-  source_location = "https://github.com/mirnavazquez/MVRL_cv/R/"
+  pdf_location = "https://github.com/mirnavazquez/MVRL_cv/cv.pdf",
+  html_location = "https://github.com/mirnavazquez/MVRL_cv/cv.html",
+  source_location = "https://github.com/mirnavazquez/MVRL_cv/cv.rmd"
 )
 
 # install.packages("devtools")

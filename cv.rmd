@@ -45,13 +45,13 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-![avatar](/Users/kiley/Documents/MVRL_cv/img/Foto-MVRL.png){width=100%}
+![avatar](https://raw.githubusercontent.com/mirnavazquez/MVRL_cv/main/img/Foto-MVRL.png){width=100%}
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _https://github.com/mirnavazquez/MVRL_cv/CV/_")
+  cat("View this CV online [here] (https://mirnavazquez.netlify.app/media/resume.html)")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mirnavazquez/MVRL_cv/CV/MVRL_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/mirnavazquez/MVRL_cv/0d6dc66933742715ceb43e727d72c16d5dac8536/cv.pdf)")
 }
 ```
 
