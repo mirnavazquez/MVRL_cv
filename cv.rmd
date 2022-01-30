@@ -49,7 +49,7 @@ Aside
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online [here] (https://mirnavazquez.netlify.app/media/resume.html)")
+  cat("View this CV online at: https://mirnavazquez.netlify.app/media/resume.html")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://raw.githubusercontent.com/mirnavazquez/MVRL_cv/0d6dc66933742715ceb43e727d72c16d5dac8536/cv.pdf)")
 }
